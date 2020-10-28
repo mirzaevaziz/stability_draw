@@ -19,44 +19,23 @@ namespace FinderOfStandarts.Methods
 
             foreach (var candidate in candidates)
             {
-                var radius = spheres.Where(w => !excludedObjects.Contains(w.ObjectIndex.Value) && w.Enemies.Contains(candidate)).Max(m => m.Radius);
-
-
-
-                var relativeCount = 0;
-                var enemyCount = 0;
-
-                for (int i = 0; i < Math.Sqrt(distances.Length); i++)
-                {
-                    if (distances[candidate, i] < radius)
-                    {
-                        if (set.Objects[candidate][set.ClassFeatureIndex] == set.Objects[i][set.ClassFeatureIndex])
-                            relativeCount++;
-                        else
-                            enemyCount++;
-                    }
+                var relativeCount = spheres.First(w => w.ObjectIndex == candidate).Relatives.Where(w => !excludedObjects.Contains(w)).Count();
+                if (relativeCount == 0){
+                    log.WriteLine(spheres.First(w => w.ObjectIndex == candidate));
                 }
+                var enemyCount = spheres.Count(w => !excludedObjects.Contains(w.ObjectIndex.Value) && w.Enemies.Contains(candidate));
 
-                
+                var classCount = set.Objects.Count(w => w[set.ClassFeatureIndex] == set.Objects[candidate][set.ClassFeatureIndex] && !excludedObjects.Contains(w.Index));
 
-                // if (relativeCount == 0)
-                // {
-                //     log.WriteLine(spheres.First(w => w.ObjectIndex == candidate));
-                // }
-                // var enemyCount = spheres.Count(w => !excludedObjects.Contains(w.ObjectIndex.Value) && w.Enemies.Contains(candidate));
-
-                decimal classCount = set.Objects.Count(w => w[set.ClassFeatureIndex] == set.Objects[candidate][set.ClassFeatureIndex] && !excludedObjects.Contains(w.Index));
-
-                decimal nonclassCount = set.Objects.Count(w => w[set.ClassFeatureIndex] != set.Objects[candidate][set.ClassFeatureIndex] && !excludedObjects.Contains(w.Index));
-
-                if (enemyCount / nonclassCount >= relativeCount / classCount)
+                var nonclassCount = set.Objects.Count(w => w[set.ClassFeatureIndex] != set.Objects[candidate][set.ClassFeatureIndex] && !excludedObjects.Contains(w.Index));
+                if (enemyCount / (decimal)nonclassCount >= relativeCount / (decimal)classCount)
                 {
                     log.WriteLine($@"Removed noisy object {candidate}: EnemyCount={enemyCount}
                     RelativeCount={relativeCount}
                     ClassObjectsCount={classCount}
                     NonClassObjectsCount={nonclassCount}
                     ");
-                    result.Add(candidate);
+                    result.Add(candidate);                    
                 }
             }
 

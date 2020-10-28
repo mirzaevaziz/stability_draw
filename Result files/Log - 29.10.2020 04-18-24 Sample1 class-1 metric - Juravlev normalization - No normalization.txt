@@ -1,0 +1,201 @@
+ObjectSet = "Sample1"
+               , Objects count = 100 
+               , Class value = 1
+               , Class objects = 50
+               , Non Class objects = 50
+               , ClassFeatureIndex = 2
+Class value = 1
+Metric = Juravlev
+Normalized by - No normalization
+====FindStandarts BEGIN====
+Enemy objects 4, 5, 14, 15, 24, 25, 34, 35, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 64, 65, 74, 75, 84, 85, 94, 95
+Coverage objects 4, 5, 14, 15, 24, 25, 34, 35, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 64, 65, 74, 75, 84, 85, 94, 95
+Removed noisy object 5: EnemyCount=5
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 50: EnemyCount=5
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 4: EnemyCount=5
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 59: EnemyCount=5
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 15: EnemyCount=4
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 51: EnemyCount=4
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 14: EnemyCount=4
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 58: EnemyCount=4
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 25: EnemyCount=3
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 52: EnemyCount=3
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 24: EnemyCount=3
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 57: EnemyCount=3
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 35: EnemyCount=2
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 53: EnemyCount=2
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 34: EnemyCount=2
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 56: EnemyCount=2
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 45: EnemyCount=2
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 54: EnemyCount=2
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 44: EnemyCount=2
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 55: EnemyCount=2
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 40: EnemyCount=5
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 41: EnemyCount=4
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 42: EnemyCount=3
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 43: EnemyCount=2
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 46: EnemyCount=2
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 47: EnemyCount=3
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 48: EnemyCount=4
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 49: EnemyCount=5
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 65: EnemyCount=2
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 64: EnemyCount=2
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 75: EnemyCount=3
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 74: EnemyCount=3
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 85: EnemyCount=4
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 84: EnemyCount=4
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 95: EnemyCount=5
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Removed noisy object 94: EnemyCount=5
+                    RelativeCount=1
+                    ClassObjectsCount=50
+                    NonClassObjectsCount=50
+                    
+Enemy objects 3, 6, 13, 16, 23, 26, 30, 31, 32, 33, 36, 37, 38, 39, 60, 61, 62, 63, 66, 67, 68, 69, 73, 76, 83, 86, 93, 96
+Coverage objects 3, 6, 13, 16, 23, 26, 30, 31, 32, 33, 36, 37, 38, 39, 60, 61, 62, 63, 66, 67, 68, 69, 73, 76, 83, 86, 93, 96
+Stability = 10.24
+NoisyObjects (36): {4, 5, 14, 15, 24, 25, 34, 35, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 64, 65, 74, 75, 84, 85, 94, 95}
+Standarts (4): {11, 18, 81, 99}
+Stability = 10.24
+====FindStandarts END====
+Name & Stability & Noisy objects & Standart objects & Groups
+Sample1 & 10.24000 & 36 & 4 & 4

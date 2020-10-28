@@ -55,34 +55,23 @@ namespace FinderOfStandarts.Algorithms
 
             IEnumerable<Sphere> spheres;
             spheres = Sphere.FindAll(set, dist, excludedObjects);
+
             log.WriteLine($"Enemy objects {string.Join(", ", spheres.SelectMany(s => s.Enemies).Distinct().OrderBy(o => o))}");
             log.WriteLine($"Coverage objects {string.Join(", ", spheres.SelectMany(s => s.Coverage).Distinct().OrderBy(o => o))}");
+
             var noisyObjects = NoisyObjectsFinder.Find(set, spheres, dist, excludedObjects, log);
             excludedObjects.UnionWith(noisyObjects);
             spheres = Sphere.FindAll(set, dist, excludedObjects);
 
-            foreach (var item in spheres)
-            {
-                log.WriteLine(item);
-            }
-
             log.WriteLine($"Enemy objects {string.Join(", ", spheres.SelectMany(s => s.Enemies).Distinct().OrderBy(o => o))}");
             log.WriteLine($"Coverage objects {string.Join(", ", spheres.SelectMany(s => s.Coverage).Distinct().OrderBy(o => o))}");
-
-            log.WriteLine($"Removed {excludedObjects.Count} {{{string.Join(", ", excludedObjects.OrderBy(o => o))}}} noisy objects");
 
             var result = new FindStandartsResult();
             result.Groups = Methods.AcquaintanceGrouping.Find(set, spheres, excludedObjects);
 
-            log.WriteLine($"Groups count = {result.Groups.Count}");
-            foreach (var group in result.Groups)
-            {
-                log.WriteLine($"Group: {{{string.Join(", ", group.OrderBy(o => o))}}}");
-            }
             result.ExcludedObjects = excludedObjects;
             result.Standarts = Methods.StandartObjectsFinder.Find(set, result.Groups, spheres, excludedObjects, dist);
 
-            log.WriteLine($"Standarts ({result.Standarts.Count}): {{{string.Join(", ", result.Standarts.OrderBy(o => o))}}}");
 
             if (result.Standarts.Count != 0)
             {
@@ -90,9 +79,14 @@ namespace FinderOfStandarts.Algorithms
                 log.WriteLine($"Stability = {result.Stability}");
             }
 
+            log.WriteLine($"NoisyObjects ({noisyObjects.Count}): {{{string.Join(", ", noisyObjects.OrderBy(o => o))}}}");
+            log.WriteLine($"Standarts ({result.Standarts.Count}): {{{string.Join(", ", result.Standarts.OrderBy(o => o))}}}");
+            log.WriteLine($"Stability = {result.Stability}");
 
             // return result;
             log.WriteLine("====FindStandarts END====");
+
+
             return result;
         }
     }
